@@ -1,6 +1,7 @@
 class PositionPlayer {
   // constructor() { }
   constructor(player_name, muglink, position, abbr_position, year, number, height, weight, games, avg, obp, slg, hr, rbi, source, time_of_source) {
+    this.type_position_player = true;
     this.player_name = player_name;
     this.name_no_space = player_name.replace(/\s+/g, '');
     this.muglink = muglink;
@@ -25,6 +26,7 @@ class PositionPlayer {
 class CatcherPlayer {
   // constructor() { }
   constructor(player_name, muglink, year, number, height, weight, games, games_started, w_l, era, so, ip, source, time_of_source) {
+    this.type_position_player = false;
     this.player_name = player_name;
     this.name_no_space = player_name.replace(/\s+/g, '');
     this.muglink = muglink;

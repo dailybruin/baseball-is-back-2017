@@ -163,7 +163,7 @@
                   <h2>{{this.abbr_position}}</h2>
                 </div>
                 <div class="row">
-                  <img src="img/cards/KortPeterson.png" style="height: 400px; display: block; margin: auto;"/>
+                  <img src="{{this.muglink}}" style="height: 400px; display: block; margin: auto;"/>
                 </div>
               </div>
             </div>
@@ -194,33 +194,45 @@
                   </div>
                 </div>
 
-                <div class="row statistics">
-                  <p>College Hitting Statistics</p>
-                  <p>From {{this.source}}</p>
-                  <div class="stats-circle small-2 columns">
-                    <p>G</p>
-                    <p>{{this.games}}</p>
-                  </div>
-                  <div class="stats-circle small-2 columns">
-                    <p>AVG</p>
-                    <p>{{this.avg}}</p>
-                  </div>
-                  <div class="stats-circle small-2 columns">
-                    <p>OBP</p>
-                    <p>{{this.obp}}</p>
-                  </div>
-                  <div class="stats-circle small-2 columns">
-                    <p>SLG</p>
-                    <p>{{this.slg}}</p>
-                  </div>
-                  <div class="stats-circle small-2 columns">
-                    <p>HR</p>
-                    <p>{{this.hr}}</p>
-                  </div>
-                  <div class="stats-circle small-2 columns">
-                    <p>RBI</p>
-                    <p>{{this.rbi}}</p>
-                  </div>
+                <div class="row">
+                  <h3>College Hitting Statistics</h3>
+                  <h2>From: {{this.source}}</h2>
+                  {{#if this.type_position_player}}
+                    <div class="stats-circle small-2 columns">
+                      G {{this.games}}
+                    </div>
+                    <div class="stats-circle small-2 columns">
+                      AVG {{this.avg}}
+                    </div>
+                    <div class="stats-circle small-2 columns">
+                      OBP {{this.obp}}
+                    </div>
+                    <div class="stats-circle small-2 columns">
+                      SLG {{this.slg}}
+                    </div>
+                    <div class="stats-circle small-2 columns">
+                      HR {{this.hr}}
+                    </div>
+                    <div class="stats-circle small-2 columns">
+                      RBI {{this.rbi}}
+                    </div>
+                  {{else}}
+                    <div class="stats-circle small-2 columns">
+                      G {{this.games}} / {{this.games_started}}
+                    </div>
+                    <div class="stats-circle small-2 columns">
+                      W-L {{this.w_l}}
+                    </div>
+                    <div class="stats-circle small-2 columns">
+                      ERA {{this.era}}
+                    </div>
+                    <div class="stats-circle small-2 columns">
+                      SO {{this.so}}
+                    </div>
+                    <div class="stats-circle small-2 columns">
+                      IP {{this.ip}}
+                    </div>
+                  {{/if}}
                 </div>
               </div>
           </div>
