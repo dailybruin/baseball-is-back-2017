@@ -15,82 +15,7 @@
   </head>
   <body>
 
-<!--card pictures-->
-    <div class="reveal large" id="KortPeterson" data-reveal>
-      <div id="KortPetersonCard">
-        <div class="front front-card-content">
-          <div class="contianer red-border">
-            <div class="row">
-              <h1>Kort Peterson</h1>
-              <h2>DH</h2>
-            </div>
-            <div class="row">
-              <img src="img/cards/KortPeterson.png" style="height: 400px; display: block; margin: auto;"/>
-            </div>
-          </div>
-        </div>
-
-        <div class="back back-card-content">
-          <div class="container">
-            <div class="row">
-              <div class="small-6 columns player-info">
-                <p>Year</p>
-                <p>Height</p>
-                <p>Weight</p>
-                <p>Bats</p>
-                <p>Throws</p>
-              </div>
-              <div class="small-6 columns">
-                <p>KORT PETERSON</p>
-                <p>position</p>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="small-6 columns blurb">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque at tincidunt sapien, quis auctor felis. Curabitur ut orci nec sem maximus lobortis. Nunc at fringilla odio. Fusce sit amet nunc at felis pharetra venenatis.
-                Curabitur at dolor sapien. Aliquam eget dui euismod, viverra tortor vel, eleifend ex. Nullam a lacus suscipit, tempus mauris id, convallis sem
-              </div>
-              <div class="small-6 columns">
-                <img src="img/cards/KortPeterson.png"/>
-              </div>
-            </div>
-
-            <div class="row">
-              <h3>College Hitting Statistics</h3>
-              <div class="stats-circle small-2 columns">
-                G 55
-              </div>
-              <div class="stats-circle small-2 columns">
-                AVG 0.223
-              </div>
-              <div class="stats-circle small-2 columns">
-                OBP 0.335
-              </div>
-              <div class="stats-circle small-2 columns">
-                SLG 0.309
-              </div>
-              <div class="stats-circle small-2 columns">
-                HR 0
-              </div>
-              <div class="stats-circle small-2 columns">
-                RBI 19
-              </div>
-            </div>
-          </div>
-
-
-        </div>
-      </div>
-      <button class="close-button" data-close aria-label="Close modal" type="button">
-        <span aria-hidden="true">&times;</span>
-      </button>
-      <button class="flip-toggle" id="KortPetersonButton"><span>Click me</span></button>
-    </div>
-
-
-
-<!-- NAVBAR -->
+    <!-- NAVBAR -->
     <div class="container top">
       <div class="row nav-container">
         <div class="navbars">
@@ -103,17 +28,20 @@
         </div>
       </div>
 
-    <div class = "row top-margin">
-      <div class="small-2 columns"></div>
-        <div class="small-8 columns">
-          <h1></h1>
-          <br />
-        </div>
-      <div class="small-2 columns"></div>
-    </div>
+      <div class="row top-margin">
+        <div class="small-2 columns"></div>
+          <div class="small-8 columns">
+            <h1></h1>
+            <br />
+          </div>
+        <div class="small-2 columns"></div>
+      </div>
 
-<!--baseball field  -->
+      <!--baseball field  -->
       <div class="row">
+        <div id="cards-placeholder">
+        </div>
+
         <div class="small-12 columns">
           <div id="img-container">
             <img src="img/baseballtemplate.png" id="graphic-image" usemap="#planetmap">
@@ -134,12 +62,11 @@
         </div>
       </div>
 
-  </div>
+    </div>
 
 
-<!-- TEXT CONTENT -->
-
-  <div class="row" id="portion1">
+    <!-- TEXT CONTENT -->
+    <div class="row" id="portion1">
       <div class="large-8 large-centered columns">
         <br />
         <h1>Season Preview</h1>
@@ -204,19 +131,15 @@
         <p>Savage will utilize sophomore right-hander Jake Bird in the seventh and redshirt freshman Nathan Hadley in the sixth, each of whom throw around 90 miles per hour with intriguing off-speed pitches.</p>
 
       </div>
-  </div>
+    </div>
 
-  <div id="cards-placeholder">
-
-  </div>
-
-  <div class="row">
-    <div class="large-8 large-centered columns">
-        <footer>
-            Page developed by <a href="https://github.com/H-Huang">Howard Huang</a>. &copy; 2017 <a href="http://dailybruin.com/">Daily Bruin</a>.
-        </footer>
-      </div>
-  </div>
+    <div class="row">
+      <div class="large-8 large-centered columns">
+          <footer>
+              Page developed by <a href="https://github.com/H-Huang">Howard Huang</a>. &copy; 2017s <a href="http://dailybruin.com/">Daily Bruin</a>.
+          </footer>
+        </div>
+    </div>
 
 
 
@@ -227,18 +150,79 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js"></script>
 
     <script id="card-template" type="text/x-handlebars-template">
+      <h1>here is the card template</h1>
       {{#each .}}
         <h1>{{this.player_name}}</h1>
-        <div class="reveal large" id="{{this.name_no_space}}" data-reveal>
+        <div class="reveal large" id="KortPeterson" data-reveal>
           <div id="{{this.name_no_space}}Card">
             <div class="front front-card-content">
-
+              <div class="contianer red-border">
+                <div class="row">
+                  <h1>{{this.player_name}}</h1>
+                  <h2>{{this.abbr_position}}</h2>
+                </div>
+                <div class="row">
+                  <img src="img/cards/KortPeterson.png" style="height: 400px; display: block; margin: auto;"/>
+                </div>
+              </div>
             </div>
+
             <div class="back back-card-content">
+              <div class="container">
+                <div class="row">
+                  <div class="small-6 columns player-info">
+                    <p>{{this.year}}</p>
+                    <p>{{this.height}}</p>
+                    <p>{{this.weight}}</p>
+                    <p>Bats</p>
+                    <p>Throws</p>
+                  </div>
+                  <div class="small-6 columns">
+                    <p>{{this.player_name}}</p>
+                    <p>{{this.position}}</p>
+                  </div>
+                </div>
 
-            </div>
+                <div class="row">
+                  <div class="small-6 columns blurb">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque at tincidunt sapien, quis auctor felis. Curabitur ut orci nec sem maximus lobortis. Nunc at fringilla odio. Fusce sit amet nunc at felis pharetra venenatis.
+                    Curabitur at dolor sapien. Aliquam eget dui euismod, viverra tortor vel, eleifend ex. Nullam a lacus suscipit, tempus mauris id, convallis sem
+                  </div>
+                  <div class="small-6 columns">
+                    <img src="img/cards/KortPeterson.png"/>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <h3>College Hitting Statistics</h3>
+                  <h2>From: {{this.source}}</h2>
+                  <div class="stats-circle small-2 columns">
+                    G {{this.games}}
+                  </div>
+                  <div class="stats-circle small-2 columns">
+                    AVG {{this.avg}}
+                  </div>
+                  <div class="stats-circle small-2 columns">
+                    OBP {{this.obp}}
+                  </div>
+                  <div class="stats-circle small-2 columns">
+                    SLG {{this.slg}}
+                  </div>
+                  <div class="stats-circle small-2 columns">
+                    HR {{this.hr}}
+                  </div>
+                  <div class="stats-circle small-2 columns">
+                    RBI {{this.rbi}}
+                  </div>
+                </div>
+              </div>
           </div>
         </div>
+        <button class="close-button" data-close aria-label="Close modal" type="button">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <p class="flip-toggle">(Click the card to flip it)</p>
+      </div>
       {{/each}}
     </script>
 

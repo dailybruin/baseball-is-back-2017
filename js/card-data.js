@@ -47,7 +47,8 @@ class CatcherPlayer {
 var allPlayers = [];
 
 //position players
-allPlayers.push(new PositionPlayer("Brett Stephens", "http://www.uclabruins.com/images/2016/12/29/Stephens_Brett.jpg", "Left Field", "LF", "Senior", "9", "5\'11\"", "178", "55", ".223", ".335", ".309", "0", "19", "2016 DIVISION I STATS", ""));
+//Brett Stephens
+allPlayers.push(new PositionPlayer("Kort Peterson", "http://www.uclabruins.com/images/2016/12/29/Stephens_Brett.jpg", "Left Field", "LF", "Senior", "9", "5\'11\"", "178", "55", ".223", ".335", ".309", "0", "19", "2016 DIVISION I STATS", ""));
 allPlayers.push(new PositionPlayer("Daniel Amaral", "http://www.uclabruins.com/images/2016/12/28/Amaral_Daniel.jpg", "Center Fied", "CF", "Sophomore", "25", "6\'0\"", "197", "29", ".178", ".255", ".178", "0", "2", "2016 DIVISION I STATS", ""));
 allPlayers.push(new PositionPlayer("Michael Toglia", "http://www.uclabruins.com/images/2016/12/28/Toglia_Michael.jpg", "Right Field", "RF", "Freshman", "7", "6\'5\"", "201", "45", ".306", ".402", ".547", "7", "40", "2016 WEST COAST LEAGUE STATS", ""));
 allPlayers.push(new PositionPlayer("Ryan Kreidler", "http://www.uclabruins.com/images/2016/12/28/kreidler_ryan.jpg", "Third Base", "3B", "Freshman", "3", "6\'2\"", "195", "29", ".346", ".521", ".592", "3", "27", "2016 HIGH SCHOOL STATS", ""));
