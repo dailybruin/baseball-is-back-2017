@@ -226,12 +226,16 @@ footer {
 
 .stats-circle {
 		text-align: center;
-		line-height: 50px;
+		line-height: 20px;
+		font-size: 8px;
 		color: white;
+		width: 16.66%;
+    height: 0;
+    padding-bottom: 16.66%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
 		background-color: black;
-		width: auto;
-		height: 100%;
-		border-radius: 50%;
 }
 
 .player-info p {
