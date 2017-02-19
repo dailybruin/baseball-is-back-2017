@@ -137,7 +137,7 @@
     <div class="row">
       <div class="large-8 large-centered columns">
           <footer>
-              Page developed by <a href="https://github.com/H-Huang">Howard Huang</a>. &copy; 2017s <a href="http://dailybruin.com/">Daily Bruin</a>.
+              Page developed by <a href="https://github.com/H-Huang">Howard Huang</a> and <a href="https://github.com/paulinalei">Paulina Lei</a>. &copy; 2017 <a href="http://dailybruin.com/">Daily Bruin</a>.
           </footer>
         </div>
     </div>
@@ -172,11 +172,14 @@
               <div class="container">
                 <div class="row player-top">
                   <div class="small-3 columns player-info">
-                    <p>{{this.year}}</p>
-                    <p>{{this.height}}</p>
-                    <p>{{this.weight}}</p>
+                    <p>Year: {{this.year}}</p>
+                    <p>Height: {{this.height}}</p>
+                    <p>Weight: {{this.weight}}lb</p>
                     <p>Bats: Left</p>
                     <p>Throws: Left</p>
+                    <div class="player-number">
+                      {{this.number}}
+                    </div>
                   </div>
                   <div class="small-9 columns player-name">
                     <h1>{{this.player_name}}</h1>
