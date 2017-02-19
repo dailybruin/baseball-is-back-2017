@@ -170,67 +170,78 @@
 
             <div class="back back-card-content">
               <div class="container">
-                <div class="row">
-                  <div class="small-6 columns player-info">
+                <div class="row player-top">
+                  <div class="small-3 columns player-info">
                     <p>{{this.year}}</p>
                     <p>{{this.height}}</p>
                     <p>{{this.weight}}</p>
-                    <p>Bats</p>
-                    <p>Throws</p>
+                    <p>Bats: Left</p>
+                    <p>Throws: Left</p>
                   </div>
-                  <div class="small-6 columns player-name">
-                    <h3>{{this.player_name}}</h3>
+                  <div class="small-9 columns player-name">
+                    <h1>{{this.player_name}}</h1>
                     <p>{{this.position}}</p>
                   </div>
                 </div>
 
                 <div class="row">
-                  <div class="small-6 columns blurb">
+                  <div class="blurb">
+                    <div class="block-photo">
+                      <img src="{{this.muglink}}"/>
+                    </div>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque at tincidunt sapien, quis auctor felis. Curabitur ut orci nec sem maximus lobortis. Nunc at fringilla odio. Fusce sit amet nunc at felis pharetra venenatis.
                     Curabitur at dolor sapien. Aliquam eget dui euismod, viverra tortor vel, eleifend ex. Nullam a lacus suscipit, tempus mauris id, convallis sem
                   </div>
-                  <div class="small-6 columns">
-                    <img src="img/cards/KortPeterson.png"/>
-                  </div>
                 </div>
 
-                <div class="row">
-                  <h3>College Hitting Statistics</h3>
-                  <h2>From: {{this.source}}</h2>
+                <div class="row player-stats">
+                  <hr />
+                  <p><div class="stats"><b>College Hitting Statistics</b></div><div class="source">from {{this.source}}</div></p>
                   {{#if this.type_position_player}}
                     <div class="stats-circle small-2 columns">
-                      G {{this.games}}
+                      <p>G</p>
+                      <p>{{this.games}}</p>
                     </div>
                     <div class="stats-circle small-2 columns">
-                      AVG {{this.avg}}
+                      <p>AVG</p>
+                      <p>{{this.avg}}</p>
                     </div>
                     <div class="stats-circle small-2 columns">
-                      OBP {{this.obp}}
+                      <p>OBP</p>
+                      <p>{{this.obp}}</p>
                     </div>
                     <div class="stats-circle small-2 columns">
-                      SLG {{this.slg}}
+                      <p>SLG</p>
+                      <p>{{this.slg}}</p>
                     </div>
                     <div class="stats-circle small-2 columns">
-                      HR {{this.hr}}
+                      <p>HR</p>
+                      <p>{{this.hr}}</p>
                     </div>
                     <div class="stats-circle small-2 columns">
-                      RBI {{this.rbi}}
+                      <p>RBI</p>
+                      <p>{{this.rbi}}</p>
                     </div>
                   {{else}}
                     <div class="stats-circle small-2 columns">
-                      G {{this.games}} / {{this.games_started}}
+                      <p>G / GS</p>
+                      <p>{{this.games}} / {{this.games_started}}</p>
                     </div>
                     <div class="stats-circle small-2 columns">
-                      W-L {{this.w_l}}
+                      <p>W-L</p>
+                      <p>{{this.w_l}}</p>
                     </div>
                     <div class="stats-circle small-2 columns">
-                      ERA {{this.era}}
+                      <p>ERA</p>
+                      <p>{{this.era}}</p>
                     </div>
                     <div class="stats-circle small-2 columns">
-                      SO {{this.so}}
+                      <p>SO</p>
+                      <p>{{this.so}}</p>
                     </div>
                     <div class="stats-circle small-2 columns">
-                      IP {{this.ip}}
+                      <p>IP</p>
+                      <p>{{this.ip }}</p>
                     </div>
                   {{/if}}
                 </div>
