@@ -2,6 +2,7 @@ class PositionPlayer {
   // constructor() { }
   constructor(player_name, muglink, position, abbr_position, year, number, height, weight, games, avg, obp, slg, hr, rbi, source, time_of_source) {
     this.player_name = player_name;
+    this.name_no_space = player_name.replace(/\s+/g, '');
     this.muglink = muglink;
     this.position = position;
     this.abbr_position = abbr_position;
@@ -16,7 +17,7 @@ class PositionPlayer {
     this.hr = hr;
     this.rbi = rbi;
     this.source = source;
-    this.time_of_source = source;
+    this.time_of_source = time_of_source;
   }
 
 }
@@ -25,6 +26,7 @@ class CatcherPlayer {
   // constructor() { }
   constructor(player_name, muglink, year, number, height, weight, games, games_started, w_l, era, so, ip, source, time_of_source) {
     this.player_name = player_name;
+    this.name_no_space = player_name.replace(/\s+/g, '');
     this.muglink = muglink;
     this.year = year;
     this.number = number;
@@ -37,7 +39,7 @@ class CatcherPlayer {
     this.so = so;
     this.ip = ip;
     this.source = source;
-    this.time_of_source = source;
+    this.time_of_source = time_of_source;
   }
 
 }
@@ -61,7 +63,7 @@ allPlayers.push(new PositionPlayer("Will McInerny", "http://www.uclabruins.com/i
 allPlayers.push(new CatcherPlayer("Griffin Canning", "http://www.uclabruins.com/images/2016/12/28/Canning_Griffin.jpg", "Junior", "55", "6\'2\"", "180", "15", "15", "5-8", "3.7", "95", "109.1", "2016 DIVISION I STATS", ""));
 allPlayers.push(new CatcherPlayer("Jake Bird", "http://www.uclabruins.com/images/2016/12/28/Bird_Jake.jpg", "Junior", "14", "6\'3\"", "200", "28", "7", "1-6", "6.36", "22", "46.2", "2016 DIVISION I STATS", ""));
 allPlayers.push(new CatcherPlayer("Jon Olsen", "http://www.uclabruins.com/images/2016/12/29/Olsen_Jon.jpg", "Sophomore", "11", "6\'3\"", "202", "11", "5", "0-0", "7.36", "7", "18.1", "2016 DIVISION I STATS", ""));
-allPlayers.push(new CatcherPlayer("NAJustin HooperME", "http://www.uclabruins.com/images/2016/12/29/Hooper_Justin.jpg", "Sophomore", "12", "6\'7\"", "232", "14", "1", "1-1", "18", "9", "8", "2016 DIVISION I STATS", ""));
+allPlayers.push(new CatcherPlayer("Justin Hooper", "http://www.uclabruins.com/images/2016/12/29/Hooper_Justin.jpg", "Sophomore", "12", "6\'7\"", "232", "14", "1", "1-1", "18", "9", "8", "2016 DIVISION I STATS", ""));
 allPlayers.push(new CatcherPlayer("Moises Ceja", "http://www.uclabruins.com/images/2014/2/4/IGVOAJDOCHMYDCO.20140204202128.jpg", "Senior", "40", "6\'0\"", "179", "25", "0", "2-1", "2.6", "23", "27.2", "2016 DIVISION I STATS", ""));
 allPlayers.push(new CatcherPlayer("Matt Walker", "http://www.uclabruins.com/images/2016/12/29/Walker_Matt.jpg", "Redshirt sophomore", "30", "6\'4\"", "200", "21", "7", "5-3", "2.95", "56", "79.1", "2016 JUNIOR COLLEGE STATS", ""));
 allPlayers.push(new CatcherPlayer("Scott Burke", "http://www.uclabruins.com/images/2016/12/28/Burke_Scott.jpg", "Senior", "10", "6\'3\"", "197", "27", "0", "2-2", "4.38", "30", "37", "2016 DIVISION I STATS", ""));

@@ -332,6 +332,10 @@
       </div>
   </div>
 
+  <div id="cards-placeholder">
+
+  </div>
+
   <div class="row">
     <div class="large-8 large-centered columns">
         <footer>
@@ -340,9 +344,31 @@
       </div>
   </div>
 
+
+
     <!-- card data -->
     <script src="js/card-data.js"></script>
 
+    <!-- handlebars -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js"></script>
+
+    <script id="card-template" type="text/x-handlebars-template">
+      {{#each .}}
+        <h1>{{this.player_name}}</h1>
+        <div class="reveal large" id="{{this.name_no_space}}" data-reveal>
+          <div id="{{this.name_no_space}}Card">
+            <div class="front front-card-content">
+
+            </div>
+            <div class="back back-card-content">
+
+            </div>
+          </div>
+        </div>
+      {{/each}}
+    </script>
+
+    <!-- jquery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 
     <!-- for flipping cards -->
