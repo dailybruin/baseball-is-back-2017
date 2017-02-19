@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="icon" type="image/png" href="http://dailybruin.com/img/favicons/favicon-32x32.png" sizes="32x32">
     <title>Baseball Preview | 2017</title>
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=IM+Fell+DW+Pica:400italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Bitter' rel='stylesheet' type='text/css'>
@@ -40,7 +41,7 @@
       <!--baseball field  -->
       <div class="row">
         <div id="cards-placeholder">
-        </div>
+      </div>
 
         <div class="small-12 columns">
           <div id="img-container">
@@ -155,8 +156,8 @@
         <h1>{{this.player_name}}</h1>
         <div class="reveal large" id="KortPeterson" data-reveal>
           <div id="{{this.name_no_space}}Card">
-            <div class="front front-card-content">
-              <div class="contianer red-border">
+            <div class="front front-card-content" >
+              <div class="container">
                 <div class="row">
                   <h1>{{this.player_name}}</h1>
                   <h2>{{this.abbr_position}}</h2>
@@ -177,8 +178,8 @@
                     <p>Bats</p>
                     <p>Throws</p>
                   </div>
-                  <div class="small-6 columns">
-                    <p>{{this.player_name}}</p>
+                  <div class="small-6 columns player-name">
+                    <h3>{{this.player_name}}</h3>
                     <p>{{this.position}}</p>
                   </div>
                 </div>
@@ -193,26 +194,32 @@
                   </div>
                 </div>
 
-                <div class="row">
-                  <h3>College Hitting Statistics</h3>
-                  <h2>From: {{this.source}}</h2>
+                <div class="row statistics">
+                  <p>College Hitting Statistics</p>
+                  <p>From {{this.source}}</p>
                   <div class="stats-circle small-2 columns">
-                    G {{this.games}}
+                    <p>G</p>
+                    <p>{{this.games}}</p>
                   </div>
                   <div class="stats-circle small-2 columns">
-                    AVG {{this.avg}}
+                    <p>AVG</p>
+                    <p>{{this.avg}}</p>
                   </div>
                   <div class="stats-circle small-2 columns">
-                    OBP {{this.obp}}
+                    <p>OBP</p>
+                    <p>{{this.obp}}</p>
                   </div>
                   <div class="stats-circle small-2 columns">
-                    SLG {{this.slg}}
+                    <p>SLG</p>
+                    <p>{{this.slg}}</p>
                   </div>
                   <div class="stats-circle small-2 columns">
-                    HR {{this.hr}}
+                    <p>HR</p>
+                    <p>{{this.hr}}</p>
                   </div>
                   <div class="stats-circle small-2 columns">
-                    RBI {{this.rbi}}
+                    <p>RBI</p>
+                    <p>{{this.rbi}}</p>
                   </div>
                 </div>
               </div>
@@ -221,7 +228,7 @@
         <button class="close-button" data-close aria-label="Close modal" type="button">
           <span aria-hidden="true">&times;</span>
         </button>
-        <p class="flip-toggle">(Click the card to flip it)</p>
+      <!--  <p class="flip-toggle">(Click the card to flip it)</p> -->
       </div>
       {{/each}}
     </script>
