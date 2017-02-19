@@ -1,0 +1,211 @@
+html{
+	background-image: url("../img/bg.jpg");
+}
+
+body {
+	background-color: white;
+}
+
+h1{
+  font-size: 5vmax;
+  font-family: 'Fjalla One', serif;
+  text-align: center;
+  font-weight: 800;
+}
+
+h2{
+  font-size: 2.vmax;
+  font-family: 'Bitter', serif;
+  font-weight: 600;
+/*  display: inline;*/
+}
+
+h4 {
+	font-size: 1.2vmax;
+/*	display: inline;*/
+}
+
+p {
+	font-family: 'Georgia W01 Regular', Georgia;
+}
+
+.nav {
+	margin: auto;
+}
+
+.nav h3 {
+	font-size: 1.8vmax;
+	display: inline;
+	text-align: center;
+}
+
+#logo-before {
+	max-width: 350px;
+	display: inline;
+	margin: auto;
+}
+
+.roster-names{
+  font-size: 40px;
+  font-family: 'Fjalla One', sans-serif;
+  font-weight: 400;
+}
+
+.top .row{
+  margin: 0px;
+  max-width: none;
+}
+
+ul{
+  list-style-type: none;
+  border: none;
+}
+
+#img-container {
+	position: relative;
+	height: 100%;
+	width: 100%;
+	padding: 2% 21%;
+/*
+	-webkit-box-shadow:
+     inset 0 0 50px #000,
+                inset 0 0 50px #000,
+                inset 0 0 50px #000;
+
+     -moz-box-shadow:
+     inset 0 0 50px #000,
+                inset 0 0 50px #000,
+                inset 0 0 50px #000;
+
+          box-shadow:
+     inset 0 0 50px #000,
+                inset 0 0 50px #000,
+                inset 0 0 50px #000;
+	*/
+	margin-bottom: 5%;
+}
+
+
+.top {
+  background-color: #fff;
+}
+
+.top-margin{
+	margin-top: 2.5% !important;
+/*	margin-bottom: 2.5%;*/
+	padding-bottom: 50px;
+}
+
+.content-margin{
+	margin-top: 10%;
+}
+
+.parallax-image-background{
+	height: 100em;
+	width: 60%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.parallax-image-background1{
+	height: 150em;
+	width: 100%%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.center-text{
+	text-align: center;
+}
+
+.center-image{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.content{
+	padding: 0px 10%;
+}
+
+.db-image-caption{
+	font-size: .75em;
+	opacity: .8;
+}
+
+.block_photo_right{
+    float: right;
+    width: 15em;
+    margin: 15px -100px 15px 15px;
+}
+
+.block_photo_left{
+    float: left;
+    width: 15em;
+    margin: 15px 15px 15px -100px;
+}
+
+
+footer {
+    color: rgba(0,0,0, 0.7);
+    padding: 8px 0 17px 0;
+    font-size: 0.7em;
+    clear: both;
+    border-top: 1px solid rgba(0,0,0, 0.1);
+    text-align: center;
+}
+
+.image-hover:hover{
+	box-shadow: 0 5px 45px #000;
+ -webkit-transition: all .7s ease-in-out;
+ -moz-transition: all .7s ease-in-out;
+ -o-transition: all .7s ease-in-out;
+ -ms-transition: all .7s ease-in-out;
+ width: 175%;
+ height: 175%;
+	margin-bottom: 3%;
+}
+
+.image-hover{
+	-webkit-transition: all .7s ease-in-out;
+	-moz-transition: all .7s ease-in-out;
+	-o-transition: all .7s ease-in-out;
+	-ms-transition: all .7s ease-in-out;
+	margin-bottom: 1%;
+}
+
+/* 2017 code */
+.red-border {
+	border-width: 1px;
+	border-color: red;
+	border-style: solid;
+	height: 90vh;
+}
+
+.flip-toggle{
+	position: absolute;
+	bottom: 16px;
+	right: 16px;
+}
+
+.front-card-content h1 {
+	text-align: center;
+}
+
+.front-card-content h2 {
+	text-align: center;
+}
+
+.back-card-content h1 {
+	text-align: none;
+}
+
+.player-info p{
+	font-size: 8px;
+}
+
+.blurb {
+	font-size: 8px;
+}
