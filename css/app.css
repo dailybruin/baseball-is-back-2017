@@ -181,21 +181,13 @@ footer {
 }
 
 /* 2017 code */
-
-.red-border {
-	border-width: 1px;
-	border-color: red;
-	border-style: solid;
-	height: 90vh;
-}
-
 .flip-toggle{
 	position: absolute;
 	bottom: 16px;
 	right: 16px;
 }
 
-#KortPeterson {
+.KortPeterson {
 	height: 100%;
 	width: 70%;
 }
@@ -203,6 +195,15 @@ footer {
 #KortPetersonCard {
 	width: 50vw;
 	margin: 0 auto;
+}
+
+.front-card-content {
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+	border-radius: 5px;
+}
+
+.front-card-content:hover {
+	 box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5);
 }
 
 .front-card-content h1 {
@@ -214,8 +215,13 @@ footer {
 }
 
 .back-card-content {
-	border: 1px solid red;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+	border-radius: 5px;
 	padding: 5%;
+}
+
+.back-card-content:hover {
+	 box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5);
 }
 
 .back-card-content img {
@@ -224,10 +230,29 @@ footer {
 	float: right;
 }
 
+.player-info p {
+	font-size: 12px;
+	font-family: 'Oswald', sans-serif;
+}
+
+.player-name h3 {
+	font-family: 'Fjalla One', serif;
+}
+
+.player-name p {
+	font-size: 20px;
+	font-family: 'Fjalla One', serif;
+}
+
+.blurb {
+	font-size: 12px;
+	font-family: 'Oswald', sans-serif;
+}
+
 .stats-circle {
 		text-align: center;
-		line-height: 20px;
-		font-size: 8px;
+		font-size: 10px;
+		font-family: 'Oswald', sans-serif;
 		color: white;
 		width: 16.66%;
     height: 0;
@@ -238,10 +263,11 @@ footer {
 		background-color: black;
 }
 
-.player-info p {
-	font-size: 8px;
+.stats-circle p:first-child {
+	padding-top: 20%;
 }
 
-.blurb {
-	font-size: 8px;
+.statistics p {
+	font-size: 12px;
+	font-family: 'Fjalla One', serif;
 }
