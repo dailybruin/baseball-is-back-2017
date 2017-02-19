@@ -182,9 +182,10 @@ footer {
 
 /* 2017 code */
 .flip-toggle{
-	position: absolute;
-	bottom: 16px;
-	right: 16px;
+	font-family: 'Oswald', sans-serif;
+	font-size: 8px;
+	color: gray;
+	text-align: center;
 }
 
 .KortPeterson {
