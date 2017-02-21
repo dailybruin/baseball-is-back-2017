@@ -4,7 +4,8 @@
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link rel="icon" type="image/png" href="http://dailybruin.com/img/favicons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="http://dailybruin.com/img/favicons/favicon-32x32.png" sizes="32x32">
+    
     <title>Baseball Preview | 2017</title>
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=IM+Fell+DW+Pica:400italic' rel='stylesheet' type='text/css'>
@@ -23,7 +24,7 @@
           <header>
           <nav>
             <span class="movetext">Daily Bruin</span>
-            <a href="#"><img src="img/title-small.png" id="title"/></a>
+            <a href="#"><img src="img/baseball_preview.png" id="title"/></a>
           </nav>
           </header>
         </div>
@@ -45,9 +46,13 @@
 
         <div class="small-12 columns">
           <div id="img-container">
-            <img src="img/baseballtemplate.png" id="graphic-image" usemap="#planetmap">
+            <img src="img/baseball_field.png" id="graphic-image" usemap="#planetmap">
             <map name="planetmap">
-              <area shape="circle" coords="1215, 1690, 96" a data-open="Catchers">
+              <area shape="circle" coords="1270, 1764, 96" a data-open="GavinJohns">
+              <area shape="circle" coords="1508, 1764, 96" a data-open="WillMclnerny">
+              <area shape="circle" coords="1020, 1764, 96" a data-open="DanielRosica">
+
+              <!-- old players -->
               <area shape="circle" coords="1829, 1560, 96" a data-open="KortPeterson"> <!-- Kort Peterson -->
               <area shape="circle" coords="1209, 1260, 96" a data-open="GrantDyer">
               <area shape="circle" coords="1605, 1077, 96" a data-open="SeanBouchard"> <!-- Sean Bouchard -->
@@ -155,7 +160,7 @@
       {{#each .}}
         <h1>{{this.player_name}}</h1>
         <div class="reveal large" id="KortPeterson" data-reveal>
-          <div id="{{this.name_no_space}}Card">
+          <div id="{{this.name_no_space}}Card" class="player-card">
             <div class="front front-card-content" >
               <div class="container">
                 <div class="row">

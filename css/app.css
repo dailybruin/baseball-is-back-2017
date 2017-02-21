@@ -181,6 +181,10 @@ footer {
 }
 
 /* 2017 code */
+.reveal {
+	overflow-y: hidden;
+}
+
 .flip-toggle{
 	margin-top: 15px;
 	font-family: 'Oswald', sans-serif;
@@ -189,12 +193,7 @@ footer {
 	text-align: center;
 }
 
-.KortPeterson {
-	height: 100%;
-	width: 70%;
-}
-
-#KortPetersonCard {
+.player-card {
 	width: 50vw;
 	margin: 0 auto;
 }
@@ -206,6 +205,7 @@ footer {
 
 .front-card-content:hover {
 	 box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5);
+	 cursor: pointer;
 }
 
 .front-card-content h1 {
@@ -224,6 +224,7 @@ footer {
 
 .back-card-content:hover {
 	 box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5);
+	 cursor: pointer;
 }
 
 .player-top{
@@ -297,15 +298,15 @@ footer {
 }
 
 .stats-circle {
-		text-align: center;
-		vertical-align: middle;
-		width: 16.66%;
-    height: 0;
-    padding-bottom: 16.66%;
-    -moz-border-radius: 50%;
-    -webkit-border-radius: 50%;
-    border-radius: 50%;
-		background-color: #1775D7;
+	text-align: center;
+	vertical-align: middle;
+	width: 16.66%;
+  height: 0;
+  padding-bottom: 16.66%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+	background-color: #1775D7;
 }
 
 .stats-circle > p {
