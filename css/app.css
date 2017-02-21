@@ -181,7 +181,7 @@ footer {
 }
 
 .card-sides{
-	border-width: 15px;
+	border-width: 12px;
 	border-style: solid;
 	border-color: #3284BF;
 }
@@ -192,7 +192,7 @@ footer {
 }
 
 /* media queries */
-@media (min-width: 320px) and (max-width: 1024px) {
+@media (min-width: 640px) and (max-width: 1024px) {
 
 	.player-name > h1 {
 		font-family: 'Fjalla One', serif;
@@ -203,7 +203,7 @@ footer {
 
 	.front-card-content img {
 		border-radius: 3px;
-		height: 50vh;
+		max-height: 50vh;
 	}
 
 	.player-card {
@@ -253,6 +253,74 @@ footer {
 
 	#stats-number{
 		font-size: 15px;
+		color: gold;
+	}
+}
+
+/* media queries */
+@media (min-width: 320px) and (max-width: 639px) {
+
+	.player-name > h1 {
+		font-family: 'Fjalla One', serif;
+		margin: 0px;
+		font-size: 16px;
+		text-align: right;
+	}
+
+	.front-card-content img {
+		border-radius: 3px;
+		max-height: 40vh;
+	}
+
+	.player-card {
+		width: 80vw;
+	}
+
+	.player-info > p {
+		font-size: 7px;
+	}
+
+	.player-number {
+		display: block;
+		background-color: blue;
+		text-align: center;
+		color: white;
+		font-size: 7px;
+		margin: 3px 0px;
+		max-width: 50px;
+		border-radius: 3px;
+	}
+
+	.blurb {
+		font-size: 8px;
+	}
+
+	.back-card-content img {
+		max-width: 150px;
+		min-width: 100px;
+		width: 20vw;
+		display: inline-block;
+		vertical-align: middle;
+		border-radius: 3px;
+	}
+
+	.player-stats .stats {
+		font-size: 7px;
+	}
+
+	.source {
+		font-size: 5px;
+	}
+
+	.stats-circle > p {
+		line-height: 7px;
+		font-size: 7px;
+		font-family: 'Oswald', sans-serif;
+		color: white;
+	}
+
+	#stats-number{
+		font-size: 8px;
 		color: gold;
 	}
 }

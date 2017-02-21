@@ -46,9 +46,9 @@
               <area shape="circle" coords="1415, 1028, 96" a data-open="JakeHirabayashi">
 
               <!-- starting rotation and bullpen -->
-              <area shape="circle" coords="260, 1165, 96" a data-open="JakeBird" >
-              <area shape="circle" coords="260, 1417, 96" a data-open="JonOlsen" >
-              <area shape="circle" coords="260, 1665, 96" a data-open="JustinHooper" >
+              <area shape="circle" coords="257, 1167, 96" a data-open="JakeBird" >
+              <area shape="circle" coords="257, 1419, 96" a data-open="JonOlsen" >
+              <area shape="circle" coords="257, 1665, 96" a data-open="JustinHooper" >
               <area shape="circle" coords="2268, 1850, 96" a data-open="BrianGadsby" >
               <area shape="circle" coords="2268, 1600, 96" a data-open="ScottBurke" >
               <area shape="circle" coords="2268, 1350, 96" a data-open="MattWalker" >
@@ -166,7 +166,7 @@
             <div class="back back-card-content card-sides">
               <div class="container">
                 <div class="row player-top">
-                  <div class="small-4 columns player-info">
+                  <div class="small-6 medium-4 columns player-info">
                     <p>Year: {{this.year}}</p>
                     <p>Height: {{this.height}}</p>
                     <p>Weight: {{this.weight}}lb</p>
@@ -176,7 +176,7 @@
                       {{this.number}}
                     </div>
                   </div>
-                  <div class="small-8 columns player-name">
+                  <div class="small-6 medium-8 columns player-name">
                     <h1>{{this.player_name}}</h1>
                     <p>{{this.position}}</p>
                   </div>
@@ -195,48 +195,48 @@
                   <hr />
                   <p><div class="stats"><b>Player Statistics</b></div><div class="source">from {{this.source}}</div></p>
                   {{#if this.type_position_player}}
-                    <div class="stats-circle small-2 columns">
+                    <div class="stats-circle medium-2 columns">
                       <p>G</p>
                       <p id="stats-number">{{this.games}}</p>
                     </div>
-                    <div class="stats-circle small-2 columns">
+                    <div class="stats-circle medium-2 columns">
                       <p>AVG</p>
                       <p id="stats-number">{{this.avg}}</p>
                     </div>
-                    <div class="stats-circle small-2 columns">
+                    <div class="stats-circle medium-2 columns">
                       <p>OBP</p>
                       <p id="stats-number">{{this.obp}}</p>
                     </div>
-                    <div class="stats-circle small-2 columns">
+                    <div class="stats-circle medium-2 columns">
                       <p>SLG</p>
                       <p id="stats-number">{{this.slg}}</p>
                     </div>
-                    <div class="stats-circle small-2 columns">
+                    <div class="stats-circle medium-2 columns">
                       <p>HR</p>
                       <p id="stats-number">{{this.hr}}</p>
                     </div>
-                    <div class="stats-circle small-2 columns">
+                    <div class="stats-circle medium-2 columns">
                       <p>RBI</p>
                       <p id="stats-number">{{this.rbi}}</p>
                     </div>
                   {{else}}
-                    <div class="stats-circle small-2 columns">
+                    <div class="stats-circle medium-2 columns">
                       <p>G / GS</p>
                       <p id="stats-number">{{this.games}} / {{this.games_started}}</p>
                     </div>
-                    <div class="stats-circle small-2 columns">
+                    <div class="stats-circle medium-2 columns">
                       <p>W-L</p>
                       <p id="stats-number">{{this.w_l}}</p>
                     </div>
-                    <div class="stats-circle small-2 columns">
+                    <div class="stats-circle medium-2 columns">
                       <p>ERA</p>
                       <p id="stats-number">{{this.era}}</p>
                     </div>
-                    <div class="stats-circle small-2 columns">
+                    <div class="stats-circle medium-2 columns">
                       <p>SO</p>
                       <p id="stats-number">{{this.so}}</p>
                     </div>
-                    <div class="stats-circle small-2 columns" style="float:left;">
+                    <div class="stats-circle medium-2 columns" style="float:left;">
                       <p>IP</p>
                       <p id="stats-number">{{this.ip }}</p>
                     </div>
