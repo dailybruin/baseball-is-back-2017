@@ -1,7 +1,7 @@
 //use handlebars to fill in the card templates
 var source   = $("#card-template").html();
 var template = Handlebars.compile(source);
-var html    = template([allPlayers[0]]);
+var html    = template(allPlayers);
 $("#cards-placeholder").replaceWith(html);
 
 $(document).foundation();
@@ -47,8 +47,14 @@ $(document).scroll(function () {
 });
 
 // Setting up cards
+allPlayers.forEach(function(element){
+  $("#" + element.name_no_space + "Card").flip();
+})
 
-$("#KortPetersonCard").flip();
+
+
+
+
 $(".flip-toggle").on("click", function () {
   var playerName = $(this).context.id.split("Button")[0];
   var playerCard = playerName + "Card";

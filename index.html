@@ -12,40 +12,24 @@
     <link href='https://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Bitter' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.0/css/foundation.min.css" />
-    <link rel="stylesheet" href="css/navbar.css" />
     <link rel="stylesheet" href="css/app.css" />
   </head>
   <body>
 
     <!-- NAVBAR -->
     <div class="container top">
-      <div class="row nav-container">
-        <div class="navbars">
-          <header>
-          <nav>
-            <span class="movetext">Daily Bruin</span>
-            <a href="#"><img src="img/baseball_preview.png" id="title"/></a>
-          </nav>
-          </header>
-        </div>
-      </div>
-
-      <div class="row top-margin">
-        <div class="small-2 columns"></div>
-          <div class="small-8 columns">
-            <h1></h1>
-            <br />
-          </div>
-        <div class="small-2 columns"></div>
-      </div>
-
-      <!--baseball field  -->
       <div class="row">
-        <div id="cards-placeholder">
+          <div class="small-6 columns">
+            <img class="baseball-preview-image" src="img/baseball_preview.png" id="title"/>
+          </div>
+          <div class="small-6 columns">
+            <p class="description-text">
+              From returning players to new recruits, UCLA has a lot to anticipate for upcoming 2017 baseball season. <b>Click on a player to view their stats and find out more.</b>
+            </p>
+          </div>
       </div>
-
-        <div class="small-12 columns">
-          <div id="img-container">
+      <div class="row">
+        <div class="small-12 columns" id="field-container">
             <img src="img/baseball_field.png" id="graphic-image" usemap="#planetmap">
             <map name="planetmap">
               <area shape="circle" coords="1270, 1764, 96" a data-open="GavinJohns">
@@ -53,20 +37,29 @@
               <area shape="circle" coords="1020, 1764, 96" a data-open="DanielRosica">
               <area shape="circle" coords="965, 875, 96" a data-open="TrentChatterton">
               <area shape="circle" coords="639, 581, 96" a data-open="BrettStephens">
-              <area shape="circle" coords="1270, 340, 96" a data-open="DanielAmaral">
-              <area shape="circle" coords="1923, 590, 96" a data-open="MichaelToglia">
+              <area shape="circle" coords="1272, 332, 96" a data-open="DanielAmaral">
+              <area shape="circle" coords="1929, 585, 96" a data-open="MichaelToglia">
               <area shape="circle" coords="1414, 800, 96" a data-open="ChaseStrumpf">
               <area shape="circle" coords="880, 1126, 96" a data-open="RyanKreidler">
-              <area shape="circle" coords="1270, 1275, 96" a data-open="GriffinCanning">
+              <area shape="circle" coords="1273, 1271, 96" a data-open="GriffinCanning">
               <area shape="circle" coords="1647, 1125, 96" a data-open="SeanBouchard">
-              <area shape="circle" coords="1415, 1030, 96" a data-open="KortPeterson">
+              <area shape="circle" coords="1415, 1028, 96" a data-open="JakeHirabayashi">
 
-            </map>
-          </div>
-          <br />
+              <!-- starting rotation and bullpen -->
+              <area shape="circle" coords="260, 1165, 96" a data-open="JakeBird" >
+              <area shape="circle" coords="260, 1417, 96" a data-open="JonOlsen" >
+              <area shape="circle" coords="260, 1665, 96" a data-open="JustinHooper" >
+              <area shape="circle" coords="2268, 1850, 96" a data-open="BrianGadsby" >
+              <area shape="circle" coords="2268, 1600, 96" a data-open="ScottBurke" >
+              <area shape="circle" coords="2268, 1350, 96" a data-open="MattWalker" >
+              <area shape="circle" coords="2268, 1100, 96" a data-open="MoisesCeja" >
+
         </div>
       </div>
+    </div>
 
+    <div class="row">
+      <div id="cards-placeholder">
     </div>
 
 
@@ -155,37 +148,35 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js"></script>
 
     <script id="card-template" type="text/x-handlebars-template">
-      <h1>here is the card template</h1>
       {{#each .}}
-        <h1>{{this.player_name}}</h1>
-        <div class="reveal large" id="KortPeterson" data-reveal>
+        <div class="reveal large" id="{{this.name_no_space}}" data-reveal>
           <div id="{{this.name_no_space}}Card" class="player-card">
-            <div class="front front-card-content" >
+            <div class="front front-card-content card-sides" >
               <div class="container">
                 <div class="row">
                   <h1>{{this.player_name}}</h1>
                   <h2>{{this.abbr_position}}</h2>
                 </div>
                 <div class="row">
-                  <img class="front-card-mug" src="{{this.muglink}}"/>
+                  <img class="front-card-mug" src="img/cards/web.sp.{{this.first_name}}.{{this.last_name}}.File.jpg"/>
                 </div>
               </div>
             </div>
 
-            <div class="back back-card-content">
+            <div class="back back-card-content card-sides">
               <div class="container">
                 <div class="row player-top">
-                  <div class="small-3 columns player-info">
+                  <div class="small-4 columns player-info">
                     <p>Year: {{this.year}}</p>
                     <p>Height: {{this.height}}</p>
                     <p>Weight: {{this.weight}}lb</p>
-                    <p>Bats: Left</p>
-                    <p>Throws: Left</p>
+                    <p>Bats: {{this.bats}}</p>
+                    <p>Throws: {{this.throws}}</p>
                     <div class="player-number">
                       {{this.number}}
                     </div>
                   </div>
-                  <div class="small-9 columns player-name">
+                  <div class="small-8 columns player-name">
                     <h1>{{this.player_name}}</h1>
                     <p>{{this.position}}</p>
                   </div>
@@ -196,59 +187,58 @@
                     <div class="block-photo">
                       <img src="{{this.muglink}}"/>
                     </div>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque at tincidunt sapien, quis auctor felis. Curabitur ut orci nec sem maximus lobortis. Nunc at fringilla odio. Fusce sit amet nunc at felis pharetra venenatis.
-                    Curabitur at dolor sapien. Aliquam eget dui euismod, viverra tortor vel, eleifend ex. Nullam a lacus suscipit, tempus mauris id, convallis sem
+                    {{this.blurb}}
                   </div>
                 </div>
 
                 <div class="row player-stats">
                   <hr />
-                  <p><div class="stats"><b>College Hitting Statistics</b></div><div class="source">from {{this.source}}</div></p>
+                  <p><div class="stats"><b>Player Statistics</b></div><div class="source">from {{this.source}}</div></p>
                   {{#if this.type_position_player}}
                     <div class="stats-circle small-2 columns">
                       <p>G</p>
-                      <p>{{this.games}}</p>
+                      <p id="stats-number">{{this.games}}</p>
                     </div>
                     <div class="stats-circle small-2 columns">
                       <p>AVG</p>
-                      <p>{{this.avg}}</p>
+                      <p id="stats-number">{{this.avg}}</p>
                     </div>
                     <div class="stats-circle small-2 columns">
                       <p>OBP</p>
-                      <p>{{this.obp}}</p>
+                      <p id="stats-number">{{this.obp}}</p>
                     </div>
                     <div class="stats-circle small-2 columns">
                       <p>SLG</p>
-                      <p>{{this.slg}}</p>
+                      <p id="stats-number">{{this.slg}}</p>
                     </div>
                     <div class="stats-circle small-2 columns">
                       <p>HR</p>
-                      <p>{{this.hr}}</p>
+                      <p id="stats-number">{{this.hr}}</p>
                     </div>
                     <div class="stats-circle small-2 columns">
                       <p>RBI</p>
-                      <p>{{this.rbi}}</p>
+                      <p id="stats-number">{{this.rbi}}</p>
                     </div>
                   {{else}}
                     <div class="stats-circle small-2 columns">
                       <p>G / GS</p>
-                      <p>{{this.games}} / {{this.games_started}}</p>
+                      <p id="stats-number">{{this.games}} / {{this.games_started}}</p>
                     </div>
                     <div class="stats-circle small-2 columns">
                       <p>W-L</p>
-                      <p>{{this.w_l}}</p>
+                      <p id="stats-number">{{this.w_l}}</p>
                     </div>
                     <div class="stats-circle small-2 columns">
                       <p>ERA</p>
-                      <p>{{this.era}}</p>
+                      <p id="stats-number">{{this.era}}</p>
                     </div>
                     <div class="stats-circle small-2 columns">
                       <p>SO</p>
-                      <p>{{this.so}}</p>
+                      <p id="stats-number">{{this.so}}</p>
                     </div>
-                    <div class="stats-circle small-2 columns">
+                    <div class="stats-circle small-2 columns" style="float:left;">
                       <p>IP</p>
-                      <p>{{this.ip }}</p>
+                      <p id="stats-number">{{this.ip }}</p>
                     </div>
                   {{/if}}
                 </div>

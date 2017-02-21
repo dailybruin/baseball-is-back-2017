@@ -1,156 +1,19 @@
-html{
-	background-image: url("../img/bg.jpg");
-	width: 100%;
-	height: 100%;
+.nav-container{
+	margin: 0px;
 }
 
-body {
-	background-color: white;
-	width: 100%;
-	height: 100%;
-}
-
-h1{
-  font-size: 5vmax;
-  font-family: 'Fjalla One', serif;
-  text-align: center;
-  font-weight: 800;
-}
-
-h2{
-  font-size: 2.vmax;
-  font-family: 'Bitter', serif;
-  font-weight: 600;
-/*  display: inline;*/
-}
-
-h4 {
-	font-size: 1.2vmax;
-/*	display: inline;*/
-}
-
-p {
-	font-family: 'Georgia W01 Regular', Georgia;
-}
-
-.nav {
-	margin: auto;
-}
-
-.nav h3 {
-	font-size: 1.8vmax;
-	display: inline;
-	text-align: center;
-}
-
-#logo-before {
-	max-width: 350px;
-	display: inline;
-	margin: auto;
-}
-
-.roster-names{
-  font-size: 40px;
-  font-family: 'Fjalla One', sans-serif;
-  font-weight: 400;
-}
-
-.top .row{
-  margin: 0px;
-  max-width: none;
-}
-
-ul{
-  list-style-type: none;
-  border: none;
-}
-
-#img-container {
-	position: relative;
-	height: 100%;
-	width: 100%;
-	padding: 2% 21%;
-/*
-	-webkit-box-shadow:
-     inset 0 0 50px #000,
-                inset 0 0 50px #000,
-                inset 0 0 50px #000;
-
-     -moz-box-shadow:
-     inset 0 0 50px #000,
-                inset 0 0 50px #000,
-                inset 0 0 50px #000;
-
-          box-shadow:
-     inset 0 0 50px #000,
-                inset 0 0 50px #000,
-                inset 0 0 50px #000;
-	*/
-	margin-bottom: 5%;
-}
-
-
-.top {
-  background-color: #fff;
-}
-
-.top-margin{
-	margin-top: 2.5% !important;
-/*	margin-bottom: 2.5%;*/
-	padding-bottom: 50px;
-}
-
-.content-margin{
-	margin-top: 10%;
-}
-
-.parallax-image-background{
-	height: 100em;
-	width: 60%;
+.baseball-preview-image{
 	display: block;
-	margin-left: auto;
-	margin-right: auto;
+	margin: 3% auto;
 }
 
-.parallax-image-background1{
-	height: 150em;
-	width: 100%%;
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
+.description-text {
+	margin-top: 5%;
 }
 
-.center-text{
-	text-align: center;
+#field-container {
+	padding-left: 3vw;
 }
-
-.center-image{
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-.content{
-	padding: 0px 10%;
-}
-
-.db-image-caption{
-	font-size: .75em;
-	opacity: .8;
-}
-
-.block_photo_right{
-    float: right;
-    width: 15em;
-    margin: 15px -100px 15px 15px;
-}
-
-.block_photo_left{
-    float: left;
-    width: 15em;
-    margin: 15px 15px 15px -100px;
-}
-
 
 footer {
     color: rgba(0,0,0, 0.7);
@@ -159,25 +22,6 @@ footer {
     clear: both;
     border-top: 1px solid rgba(0,0,0, 0.1);
     text-align: center;
-}
-
-.image-hover:hover{
-	box-shadow: 0 5px 45px #000;
- -webkit-transition: all .7s ease-in-out;
- -moz-transition: all .7s ease-in-out;
- -o-transition: all .7s ease-in-out;
- -ms-transition: all .7s ease-in-out;
- width: 175%;
- height: 175%;
-	margin-bottom: 3%;
-}
-
-.image-hover{
-	-webkit-transition: all .7s ease-in-out;
-	-moz-transition: all .7s ease-in-out;
-	-o-transition: all .7s ease-in-out;
-	-ms-transition: all .7s ease-in-out;
-	margin-bottom: 1%;
 }
 
 /* 2017 code */
@@ -209,8 +53,8 @@ footer {
 }
 
 .front-card-mug {
-	height: 50vh;
-	display: block; 
+	height: 70vh;
+	display: block;
 	margin: auto;
 }
 
@@ -264,6 +108,7 @@ footer {
 .player-name > h1 {
 	font-family: 'Fjalla One', serif;
 	margin: 0px;
+	font-size: 68px;
 	text-align: right;
 }
 
@@ -280,12 +125,14 @@ footer {
 
 .player-number {
 	display: block;
-	background-color: blue;
+	background-color: #3284BF;
 	text-align: center;
-	color: white;
-	font-size: 24px;
+	color: gold;
+	font-size: 36px;
 	margin: 10px 0px;
+	padding: 10px;
 	border-radius: 3px;
+	max-width: 125px;
 }
 
 .player-stats .stats{
@@ -333,8 +180,26 @@ footer {
 	font-family: 'Fjalla One', serif;
 }
 
+.card-sides{
+	border-width: 15px;
+	border-style: solid;
+	border-color: #3284BF;
+}
+
+#stats-number{
+	font-size: 25px;
+	color: gold;
+}
+
 /* media queries */
-@media (min-width: 320px) and (max-width: 420px) {
+@media (min-width: 320px) and (max-width: 1024px) {
+
+	.player-name > h1 {
+		font-family: 'Fjalla One', serif;
+		margin: 0px;
+		font-size: 24px;
+		text-align: right;
+	}
 
 	.front-card-content img {
 		border-radius: 3px;
@@ -342,13 +207,12 @@ footer {
 	}
 
 	.player-card {
-		width: 100%;
+		width: 60vw;
 	}
-
 	.player-info > p {
 		font-size: 12px;
 	}
-	
+
 	.player-number {
 		display: block;
 		background-color: blue;
@@ -375,7 +239,7 @@ footer {
 	.player-stats .stats {
 		font-size: 14px;
 	}
-	
+
 	.source {
 		font-size: 12px;
 	}
@@ -385,5 +249,10 @@ footer {
 		font-size: 12px;
 		font-family: 'Oswald', sans-serif;
 		color: white;
+	}
+
+	#stats-number{
+		font-size: 15px;
+		color: gold;
 	}
 }
