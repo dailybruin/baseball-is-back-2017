@@ -263,6 +263,13 @@ footer {
 		text-align: right;
 	}
 
+	.player-name > p {
+		font-family: 'Fjalla One', serif;
+		margin: 0px;
+		font-size: 16px;
+		text-align: right;
+	}
+
 	.front-card-content img {
 		border-radius: 3px;
 		max-height: 50vh;
@@ -353,12 +360,12 @@ footer {
 @media (min-width: 320px) and (max-width: 639px) {
 
 	.front-names h1 {
-		font-size: 16px;
+		font-size: 14px;
 		font-family: 'Fjalla One', serif;
 	}
 
 	.front-names h2 {
-		font-size: 12px;
+		font-size: 10px;
 		font-family: 'Fjalla One', serif;
 		margin-bottom: 3%;
 	}
@@ -366,7 +373,14 @@ footer {
 	.player-name > h1 {
 		font-family: 'Fjalla One', serif;
 		margin: 0px;
-		font-size: 16px;
+		font-size: 12px;
+		text-align: right;
+	}
+
+	.player-name > p {
+		font-family: 'Fjalla One', serif;
+		margin: 0px;
+		font-size: 12px;
 		text-align: right;
 	}
 
@@ -383,6 +397,10 @@ footer {
 		font-size: 7px;
 	}
 
+	.front-card-mug {
+		max-width: 40vw;
+	}
+
 	.player-number {
 		display: block;
 		background-color: blue;
@@ -390,7 +408,7 @@ footer {
 		color: white;
 		font-size: 7px;
 		margin: 3px 0px;
-		max-width: 50px;
+		max-width: 30px;
 		border-radius: 3px;
 	}
 
@@ -416,14 +434,14 @@ footer {
 	}
 
 	.stats-circle > p {
-		line-height: 7px;
-		font-size: 7px;
+		line-height: 3px;
+		font-size: 4px;
 		font-family: 'Oswald', sans-serif;
 		color: white;
 	}
 
 	#stats-number{
-		font-size: 8px;
+		font-size: 5px;
 		color: gold;
 	}
 
@@ -434,11 +452,11 @@ footer {
 	}
 
 	.description-text {
-		margin-top: 10%;
+		margin-top: 5%;
 		display: inline-block;
 		vertical-align: middle;
 		line-height: normal;
-		font-size: .6em;
+		font-size: .5em;
 	}
 
 	footer {
@@ -451,6 +469,6 @@ footer {
 	}
 
 	.skewed {
-		font-size: 1.2em;
+		font-size: 0.9em;
 	}
 }
