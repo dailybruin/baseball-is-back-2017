@@ -20,12 +20,14 @@
     <div class="container top">
       <div class="row">
           <div class="small-6 columns">
-            <img class="baseball-preview-image" src="img/baseball_preview.png" id="title"/>
+            <div class="skewed"><span>Baseballs Back</span></div>
           </div>
           <div class="small-6 columns">
-            <p class="description-text">
-              From returning players to new recruits, UCLA has a lot to anticipate for upcoming 2017 baseball season. <b>Click on a player to view their stats and find out more.</b>
-            </p>
+            <div class="desc-container">
+              <p class="description-text">
+                The UCLA baseball season has just gotten underway. With a more experienced set of returners and an influx of impact freshmen, the Bruins have started on their road to Omaha.<b> Click on a player to see his stats and more.</b>
+              </p>
+            </div>
           </div>
       </div>
       <div class="row">
@@ -82,7 +84,7 @@
           <div id="{{this.name_no_space}}Card" class="player-card">
             <div class="front front-card-content card-sides" >
               <div class="container">
-                <div class="row">
+                <div class="row front-names">
                   <h1>{{this.player_name}}</h1>
                   <h2>{{this.abbr_position}}</h2>
                 </div>
@@ -96,11 +98,11 @@
               <div class="container">
                 <div class="row player-top">
                   <div class="small-6 medium-4 columns player-info">
-                    <p>Year: {{this.year}}</p>
-                    <p>Height: {{this.height}}</p>
-                    <p>Weight: {{this.weight}}lb</p>
-                    <p>Bats: {{this.bats}}</p>
-                    <p>Throws: {{this.throws}}</p>
+                    <p><u>Year:</u> {{this.year}}</p>
+                    <p><u>Height:</u> {{this.height}}</p>
+                    <p><u>Weight:</u> {{this.weight}}lb</p>
+                    <p><u>Bats:</u> {{this.bats}}</p>
+                    <p><u>Throws:</u> {{this.throws}}</p>
                     <div class="player-number">
                       {{this.number}}
                     </div>
@@ -122,54 +124,57 @@
 
                 <div class="row player-stats">
                   <hr />
-                  <p><div class="stats"><b>Player Statistics</b></div><div class="source">from {{this.source}}</div></p>
-                  {{#if this.type_position_player}}
-                    <div class="stats-circle medium-2 columns">
-                      <p>G</p>
-                      <p id="stats-number">{{this.games}}</p>
-                    </div>
-                    <div class="stats-circle medium-2 columns">
-                      <p>AVG</p>
-                      <p id="stats-number">{{this.avg}}</p>
-                    </div>
-                    <div class="stats-circle medium-2 columns">
-                      <p>OBP</p>
-                      <p id="stats-number">{{this.obp}}</p>
-                    </div>
-                    <div class="stats-circle medium-2 columns">
-                      <p>SLG</p>
-                      <p id="stats-number">{{this.slg}}</p>
-                    </div>
-                    <div class="stats-circle medium-2 columns">
-                      <p>HR</p>
-                      <p id="stats-number">{{this.hr}}</p>
-                    </div>
-                    <div class="stats-circle medium-2 columns">
-                      <p>RBI</p>
-                      <p id="stats-number">{{this.rbi}}</p>
-                    </div>
-                  {{else}}
-                    <div class="stats-circle medium-2 columns">
-                      <p>G / GS</p>
-                      <p id="stats-number">{{this.games}} / {{this.games_started}}</p>
-                    </div>
-                    <div class="stats-circle medium-2 columns">
-                      <p>W-L</p>
-                      <p id="stats-number">{{this.w_l}}</p>
-                    </div>
-                    <div class="stats-circle medium-2 columns">
-                      <p>ERA</p>
-                      <p id="stats-number">{{this.era}}</p>
-                    </div>
-                    <div class="stats-circle medium-2 columns">
-                      <p>SO</p>
-                      <p id="stats-number">{{this.so}}</p>
-                    </div>
-                    <div class="stats-circle medium-2 columns" style="float:left;">
-                      <p>IP</p>
-                      <p id="stats-number">{{this.ip }}</p>
-                    </div>
-                  {{/if}}
+                  <!-- <p><div class="stats"><b>Player Statistics</b></div><div class="source">from {{this.source}}</div></p> -->
+                  <p><div class="stats"><b>{{this.source}}</b></div></p>
+                  <div class="stats-circle-container">
+                    {{#if this.type_position_player}}
+                      <div class="stats-circle medium-2 columns">
+                        <p>G</p>
+                        <p id="stats-number">{{this.games}}</p>
+                      </div>
+                      <div class="stats-circle medium-2 columns">
+                        <p>AVG</p>
+                        <p id="stats-number">{{this.avg}}</p>
+                      </div>
+                      <div class="stats-circle medium-2 columns">
+                        <p>OBP</p>
+                        <p id="stats-number">{{this.obp}}</p>
+                      </div>
+                      <div class="stats-circle medium-2 columns">
+                        <p>SLG</p>
+                        <p id="stats-number">{{this.slg}}</p>
+                      </div>
+                      <div class="stats-circle medium-2 columns">
+                        <p>HR</p>
+                        <p id="stats-number">{{this.hr}}</p>
+                      </div>
+                      <div class="stats-circle medium-2 columns">
+                        <p>RBI</p>
+                        <p id="stats-number">{{this.rbi}}</p>
+                      </div>
+                    {{else}}
+                      <div class="stats-circle medium-2 medium-offset-1 columns">
+                        <p>G / GS</p>
+                        <p id="stats-number">{{this.games}} / {{this.games_started}}</p>
+                      </div>
+                      <div class="stats-circle medium-2 columns">
+                        <p>W-L</p>
+                        <p id="stats-number">{{this.w_l}}</p>
+                      </div>
+                      <div class="stats-circle medium-2 columns">
+                        <p>ERA</p>
+                        <p id="stats-number">{{this.era}}</p>
+                      </div>
+                      <div class="stats-circle medium-2 columns">
+                        <p>SO</p>
+                        <p id="stats-number">{{this.so}}</p>
+                      </div>
+                      <div class="stats-circle medium-2 columns" style="float:left">
+                        <p>IP</p>
+                        <p id="stats-number">{{this.ip }}</p>
+                      </div>
+                    {{/if}}
+                  </div>
                 </div>
               </div>
           </div>
